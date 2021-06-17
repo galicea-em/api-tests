@@ -8,7 +8,7 @@ import msal
 import requests
 import json
 
-from config_secret import config
+from config import config
 
 q_groups = 'https://graph.microsoft.com/v1.0/groups'
 
@@ -30,6 +30,7 @@ def list_groups():
   groups=[]
   endpoint = q_groups
   result=token()
+  print(result)
   if "access_token" in result:
     # Calling graph using the access token
     graph_data = requests.get(  # Use token to call downstream service

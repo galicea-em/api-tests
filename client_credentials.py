@@ -13,7 +13,7 @@ config["client_secret"]='secret'
 config["scopes"]='test'
 config["redirect_uri"]='http://127.0.0.1:8080'
 
-def get_token(self):
+def get_token():
     """
      sposób przekazania parametrów autoryzacji zależy od implementacji
      tu: JSON
